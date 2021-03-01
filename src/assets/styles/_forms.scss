@@ -1,0 +1,32 @@
+input.buscar {
+    // background-image: url(./assets/img/icoLupa.svg);
+    background-size: 16px;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    width: 17px;
+    height: 17px;
+    cursor: pointer;
+    position: absolute;
+    right: 5px;
+    bottom: -5px;
+    font-size: 0;
+    border: unset;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="number"],
+input[type="password"],
+input {
+    background-color: $white-color;
+    color: #2e2925;
+    border-radius: 4px;
+    position: relative;
+    padding: 10px 25px 10px 16px;
+    height: 40px !important;
+    width: 100%;
+    border: 1px solid #bfbfbf;
+    box-sizing: border-box;
+    outline: none;
+    margin-top: 6px;
+}

@@ -1,0 +1,30 @@
+.header-toolbar {
+    background-color: $white-color;
+    -webkit-box-shadow: 0px 3px 5px 0px rgba(214,218,215,1);
+    -moz-box-shadow: 0px 3px 5px 0px rgba(214,218,215,1);
+    box-shadow: 0px 3px 5px 0px rgba(214,218,215,1);
+    height: 66px !important;
+    position: fixed;
+    top: 0;
+}
+
+.main-container {
+    padding: 20px 16px;
+    margin-top: 66px;
+}
+
+.block-container {
+    padding: 0px 5px;
+}
+
+.gray-conteiner {
+    background-color: $container-background-color;
+    border-radius: 4px;
+    padding: 12px 17px;
+    margin-top: 3px;
+}
+
+.info-container {
+    display: flex;
+    flex-direction: column;
+}
