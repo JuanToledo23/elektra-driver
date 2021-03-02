@@ -3,38 +3,43 @@
     <div class="block-container u-mt-2">
         <label class="u-txt-medium">CURP</label>
         <div class="spinner-validator">
-            <input type="text" class="u-txt-demibold u-font-size-16" value="VELJ910216HMCNPN00">
-            <mat-icon svgIcon="ico-spinner" class="u-icon-md"></mat-icon>
+            <input type="text" class="u-txt-demibold u-font-size-16" maxlength="18" [(ngModel)]="curp" (keyup)="validateInput()">
+            <ng-container *ngIf="completedForm">
+                <mat-icon svgIcon="ico-spinner" class="u-icon-md spiner-icon spin-active" *ngIf="validating"></mat-icon>
+                <mat-icon svgIcon="ico-check" class="u-icon-md spiner-icon" *ngIf="!validating"></mat-icon>
+            </ng-container>
         </div>
     </div>
-    <div class="block-container u-mt-2">
-        <label class="u-txt-medium u-mt-2">Verifica que tus datos sean correctos</label>
-        <div class="gray-conteiner">
-            <div class="u-flex-column u-font-size-16">
-                <label>Nombre</label>
-                <label class="u-txt-demibold">Juan Alberto Venegas López</label>
-            </div>
-            <div class="u-flex-column u-font-size-16 u-mt-1">
-                <label>Fecha de nacimiento</label>
-                <label class="u-txt-demibold">16/02/1991</label>
-            </div>
-            <div class="u-flex-column u-font-size-16 u-mt-1">
-                <label>Lugar de nacimiento</label>
-                <label class="u-txt-demibold">Estado de México</label>
-            </div>
-            <div class="u-flex-column u-font-size-16 u-mt-1">
-                <label>Sexo</label>
-                <label class="u-txt-demibold">Masculino</label>
+    <ng-container *ngIf="correctForm">
+        <div class="block-container u-mt-2">
+            <label class="u-txt-medium u-mt-2">Verifica que tus datos sean correctos</label>
+            <div class="gray-conteiner">
+                <div class="u-flex-column u-font-size-16">
+                    <label>Nombre</label>
+                    <label class="u-txt-demibold">Juan Alberto Venegas López</label>
+                </div>
+                <div class="u-flex-column u-font-size-16 u-mt-1">
+                    <label>Fecha de nacimiento</label>
+                    <label class="u-txt-demibold">16/02/1991</label>
+                </div>
+                <div class="u-flex-column u-font-size-16 u-mt-1">
+                    <label>Lugar de nacimiento</label>
+                    <label class="u-txt-demibold">Estado de México</label>
+                </div>
+                <div class="u-flex-column u-font-size-16 u-mt-1">
+                    <label>Sexo</label>
+                    <label class="u-txt-demibold">Masculino</label>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="block-container u-txt-justify u-mt-1">
-        <input type="checkbox" name="grupo1" id="checkbox1" checked/>
-        <label for="checkbox1" class="u-txt-blue">Estoy de acuerdo y acepto el <span class="u-txt-link">acuerdo de privacidad</span></label>
-    </div>
-    <div class="u-flex-center u-mt-2">
-        <button mat-flat-button color="primary" class="btn">Continuar</button>
-    </div>
+        <div class="block-container u-txt-justify u-mt-1">
+            <input type="checkbox" name="grupo1" id="checkbox1" checked/>
+            <label for="checkbox1" class="u-txt-blue">Estoy de acuerdo y acepto el <span class="u-txt-link">acuerdo de privacidad</span></label>
+        </div>
+        <div class="u-flex-center u-mt-2">
+            <button mat-flat-button color="primary" class="btn">Continuar</button>
+        </div>
+    </ng-container>
 </div>
 
 <!-- <mat-grid-list cols="12" rowHeight="2:1">
