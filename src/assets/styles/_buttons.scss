@@ -9,10 +9,24 @@
     padding: 0 16px !important;
 }
 
+.btnForm {
+    min-width: unset !important;
+    width: 100% !important;
+    line-height: 40px !important;
+    margin-top: 4px !important;
+}
+
 .icoBtn {
     height: 20px !important;
     width: 20px !important;
     margin-right: 10px;
     margin-bottom: 6px;
     fill: red;
+}
+
+.desac-button {
+    background-color: #EBEBEB !important;
+    color: #D1D1D2 !important;
+    cursor: none; 
+    pointer-events: none;
 }

@@ -6,6 +6,7 @@
     height: 66px !important;
     position: fixed;
     top: 0;
+    z-index: 1;
 }
 
 .main-container {
@@ -13,8 +14,13 @@
     margin-top: 66px;
 }
 
+.info-component {
+    font-size: 16px;
+    font-family: $font-medium;
+}
+
 .block-container {
-    padding: 0px 5px;
+    padding: 0px 16px;
 }
 
 .gray-conteiner {

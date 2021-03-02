@@ -1,1 +1,28 @@
-<p>email-form works!</p>
+<div class="main-container">
+    <div class="component-title">Correo electrónico</div>
+    <div class="block-container info-component u-mt-3">Usaremos tu correo electrónico para enviarte información importante para ti.</div>
+    <div class="block-container u-mt-2">
+        <label class="u-txt-medium">Correo electrónico</label>
+        <div class="spinner-validator">
+            <input type="text" class="u-txt-demibold" [(ngModel)]="email1" (keyup)="validateEmail1()">
+            <mat-icon svgIcon="ico-check" class="u-icon-md spiner-icon" *ngIf="validatingEmail1"></mat-icon>
+            <ng-container *ngIf="!emailEmpty1">
+                <mat-icon svgIcon="ico-error" class="u-icon-md spiner-icon" *ngIf="!validatingEmail1"></mat-icon>
+            </ng-container>
+        </div>
+        <div class="u-mt-2"></div>
+        <label class="u-txt-medium">Confirma tu correo</label>
+        <div class="spinner-validator">
+            <input type="text" class="u-txt-demibold" [(ngModel)]="email2" (keyup)="validateEmail2()">
+            <mat-icon svgIcon="ico-check" class="u-icon-md spiner-icon" *ngIf="validatingEmail2"></mat-icon>
+            <ng-container *ngIf="!emailEmpty2">
+                <mat-icon svgIcon="ico-error" class="u-icon-md spiner-icon" *ngIf="!validatingEmail2"></mat-icon>
+            </ng-container>
+        </div>
+    </div>
+    <ng-container *ngIf="correctForm">
+        <div class="u-flex-center u-mt-3">
+            <button mat-flat-button color="primary" class="btn" [routerLink]="['/phone']" routerLinkActive="router-link-active">Continuar</button>
+        </div>
+    </ng-container>
+</div>

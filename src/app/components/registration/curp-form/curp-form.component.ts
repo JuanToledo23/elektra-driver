@@ -19,7 +19,6 @@ export class CurpFormComponent implements OnInit {
 
 
   validateInput() {
-    console.log(this.curp.length)
     if(this.curp.length < 18) {
       this.completedForm = false;
       this.validating = true;

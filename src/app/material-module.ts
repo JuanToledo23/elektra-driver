@@ -29,6 +29,10 @@ export class MaterialModule {
       this.domSanitizer.bypassSecurityTrustResourceUrl("assets/img/icons/check_validation.svg")
     );
     this.matIconRegistry.addSvgIcon(
+      "ico-error",
+      this.domSanitizer.bypassSecurityTrustResourceUrl("assets/img/icons/error_validation.svg")
+    );
+    this.matIconRegistry.addSvgIcon(
       "ico-spinner",
       this.domSanitizer.bypassSecurityTrustResourceUrl("assets/img/icons/spinner.svg")
     );
