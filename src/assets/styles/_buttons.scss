@@ -30,3 +30,13 @@
     cursor: none; 
     pointer-events: none;
 }
+
+.help-button {
+    color: $secundary-color !important;
+    background-color: $white-color !important;
+    border-radius: 32px !important;
+    border: solid 2px $secundary-color !important;
+    line-height: 24px !important;
+    min-width: unset !important;
+    width: 84px !important;
+}

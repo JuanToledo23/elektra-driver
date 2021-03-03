@@ -17,12 +17,13 @@ input[type="text"],
 input[type="date"],
 input[type="number"],
 input[type="password"],
-input {
+input,
+mat-select {
     background-color: $white-color;
     color: #2e2925;
     border-radius: 4px;
     position: relative;
-    padding: 10px 25px 10px 16px;
+    padding: 10px 10px 10px 16px;
     height: 40px !important;
     width: 100%;
     border: 1px solid #bfbfbf;

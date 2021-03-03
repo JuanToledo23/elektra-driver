@@ -29,3 +29,36 @@
     padding: 12px 17px;
     margin-top: 3px;
 }
+
+.driver-container {
+    box-shadow: 0px 1px 2px #00000040;
+    border-radius: 4px;
+    padding: 9px 16px;
+    cursor: pointer;
+}
+
+.process-container {
+    border-top: solid 1px #EBEBEB;
+    padding: 10px 32px;
+    cursor: pointer;
+    outline: none;
+}
+
+.process-complete-container {
+    border-top: solid 1px #EBEBEB;
+    padding: 10px 17px;
+    cursor: pointer;
+    outline: none;
+}
+
+.border-process:last-of-type  {
+    border-bottom: solid 1px #EBEBEB;
+}
+
+.step-container {
+    padding: 0px 16px;
+}
+
+.process-complete-container:last-of-type {
+    border-bottom: solid 1px #EBEBEB;
+}

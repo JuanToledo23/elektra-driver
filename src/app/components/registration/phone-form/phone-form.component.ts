@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HeaderService } from 'src/app/shared/services/header.service';
 
 @Component({
   selector: 'app-phone-form',
@@ -16,9 +17,12 @@ export class PhoneFormComponent implements OnInit {
 
   validatingCode:boolean = true;
 
-  constructor() { }
+  continueButton: boolean = false;
+
+  constructor(public headerService: HeaderService) { }
 
   ngOnInit(): void {
+    this.headerService.headerElements = {title: '¡Bienvenido, Juan!', showDriverIcon: false, showHelp: false}
   }
 
   validatePhone() {
@@ -36,26 +40,23 @@ export class PhoneFormComponent implements OnInit {
   }
 
   validateCode() {
-    this.validatingCode = true;
-    setTimeout(() => {
-      this.validatingCode = false;
-
-      if(this.code.length < 9) {
-        this.validCode = false;
-      } else {
-        this.validCode = true;
+    if(this.code.length <= 9) {
+      if(this.code.length === 4) {
+        this.code += '-';
       }
-    }, 500);
-
-/*     if(this.code.length < 9) {
-      this.validCode = false;
-    } else {
+      this.validCode = true;
       this.validatingCode = true;
       setTimeout(() => {
         this.validatingCode = false;
-      }, 2000);
-    } */
-    /* this.code = '1234-5678'; */
+        if(this.code.length < 9) {
+          this.validCode = false;
+          this.continueButton = false;
+        } else {
+          this.validCode = true;
+          this.continueButton = true;
+        }
+      }, 500);
+    }
   }
 
 }

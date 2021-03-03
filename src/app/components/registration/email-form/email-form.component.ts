@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HeaderService } from 'src/app/shared/services/header.service';
 
 @Component({
   selector: 'app-email-form',
@@ -18,9 +19,10 @@ export class EmailFormComponent implements OnInit {
 
   emailRe: RegExp = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
-  constructor() { }
+  constructor(public headerService: HeaderService) { }
 
   ngOnInit(): void {
+    this.headerService.headerElements = {title: '¡Bienvenido, Juan!', showDriverIcon: false, showHelp: false}
   }
 
   validateEmail1() {

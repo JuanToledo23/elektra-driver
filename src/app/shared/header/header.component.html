@@ -1,13 +1,12 @@
-<mat-toolbar class="header-toolbar">
-    <button mat-icon-button class="example-icon u-mr-1" aria-label="Regresar">
-        <mat-icon svgIcon="ico-arrow-left" class="u-icon-md"></mat-icon>
-    </button>
-    <span class="header-title">Registro</span>
-    <!-- <span class="u-spacer"></span>
-    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-        <mat-icon>favorite</mat-icon>
-    </button>
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-        <mat-icon>share</mat-icon>
-    </button> -->
+<mat-toolbar class="header-toolbar u-flex-between">
+    <div class="u-flex-center">
+        <button mat-icon-button class="example-icon u-mr-1" aria-label="Regresar" (click)="headerService.goBack()" *ngIf="!headerService.headerElements.showDriverIcon">
+            <mat-icon svgIcon="ico-arrow-left" class="u-icon-sm"></mat-icon>
+        </button>
+        <span class="header-title" *ngIf="!headerService.headerElements.showDriverIcon">{{headerService.headerElements.title}}</span>
+        <mat-icon svgIcon="logo-driver" class="u-icon-md u-txt-medium" *ngIf="headerService.headerElements.showDriverIcon"></mat-icon>
+    </div>
+    <div>
+        <button mat-flat-button color="primary" class="btn help-button u-font-size-12" *ngIf="headerService.headerElements.showHelp"><strong>Ayuda</strong></button>
+    </div>
 </mat-toolbar>

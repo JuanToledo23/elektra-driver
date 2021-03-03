@@ -1,0 +1,26 @@
+<div class="main-container u-mb-1">
+    <div class="block-container">
+        <div class="component-title u-txt-left">Completa tu expediente para <strong>Driver Auto</strong></div>
+    </div>
+</div>
+<ng-container *ngFor="let item of driverCarProceedings">
+    <div class="process-container border-process u-flex-center u-justify-between" *ngIf="!item.status" style="height: 54px;" [routerLink]="[item.rute]" routerLinkActive="router-link-active" >
+        <div style="max-width: 242px;">
+            <div class="u-txt-demibold u-font-size-14">{{item.title}}</div>
+            <div class="u-txt-blue u-font-size-12" *ngIf="item.nextStep">Paso siguiente recomendado</div>
+        </div>
+        <mat-icon svgIcon="ico-arrow-left" class="u-icon-sm"></mat-icon>
+    </div>
+</ng-container>
+
+<div class="step-container u-mb-1" style="margin-top: unset;">
+    <div class="block-container" style="margin: 10px 0px;" *ngIf="driverCarProceedingsComplete.length > 0">
+        <strong class="u-font-size-16">Pasos completados</strong>
+    </div>
+    <div class="process-complete-container u-flex-center u-justify-between" *ngFor="let item of driverCarProceedingsComplete" style="height: 54px;">
+        <div style="max-width: 242px;">
+            <div class="u-txt-demibold u-font-size-14 u-txt-gray">{{item.title}}</div>
+        </div>
+        <mat-icon svgIcon="ico-check" class="u-icon-sm"></mat-icon>
+    </div>
+</div>

@@ -16,6 +16,11 @@ import { PasswordFormComponent } from './components/registration/password-form/p
 import { LottieModule } from 'ngx-lottie';
 import player from 'lottie-web';
 import { HomeScreenComponent } from './components/home-screen/home-screen.component';
+import { ChooseDriverComponent } from './components/choose-driver/choose-driver.component';
+import { DriverCarProcessComponent } from './components/driver-car-record/driver-car-process/driver-car-process.component';
+import { DriverCarLegalAgreementComponent } from './components/driver-car-record/driver-car-legal-agreement/driver-car-legal-agreement.component';
+import { AlertDialog } from './shared/dialogs/alert-dialog/alert.dialog';
+import { DriverCarWhatsappSupportComponent } from './components/driver-car-record/driver-car-whatsapp-support/driver-car-whatsapp-support.component';
 export function playerFactory(){
   return player;
 }
@@ -29,7 +34,12 @@ export function playerFactory(){
     PhoneFormComponent,
     AddressFormComponent,
     PasswordFormComponent,
-    HomeScreenComponent
+    HomeScreenComponent,
+    ChooseDriverComponent,
+    DriverCarProcessComponent,
+    DriverCarLegalAgreementComponent,
+    AlertDialog,
+    DriverCarWhatsappSupportComponent
   ],
   imports: [
     BrowserModule,
@@ -42,6 +52,9 @@ export function playerFactory(){
       player: playerFactory,
       useCache: true
     }),
+  ],
+  entryComponents: [
+    AlertDialog
   ],
   providers: [],
   bootstrap: [AppComponent]

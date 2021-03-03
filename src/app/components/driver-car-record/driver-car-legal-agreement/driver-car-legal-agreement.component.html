@@ -1,0 +1,18 @@
+<div class="main-container">
+    <div class="block-container">
+        <div class="component-title u-txt-left">Acuerdo legal</div>
+    </div>
+    <div class="block-container u-mt-2">
+        <div class="u-txt-medium u-font-size-14">
+            Al enviar este registro a Elektra, acepto expresamente la recopilación y el procesamiento que Elektra y su prestación de servicios hacen con mis datos personales, incluidos los datos personales sensibles, con el fin de evaluar mi elegibilidad para utilizar, o seguir utilizando, la aplicación de EKT | Driver, entre otros fines descritos en el aviso de privacidad de la unidad. En el momento del registro, se realizará una comprobación de antecedentes en la que deberá ser aprobado antes de conectarse en línea a la aplicación EKT | Driver. Esta verificación será realizada por una empresa especializada, con la información de sus documentos y el cumplimiento de un cuestionario, sólo si la respuesta de la empresa especializada es positiva y usted cumple con los demás requisitos, usted estará activo. Este proceso de verificación de la compañía especializada incluye lo siguiente: revisión de antecedentes, evaluación del cuestionario e historial de conducción de un vehículo. Esta evaluación tendrá un costo que puede variar según la ciudad, y su valor será deducido de tus ganancias en el primer viaje a través de la aplicación EKT | Driver.
+        </div>
+        <div class="u-mt-1">
+            <input type="checkbox" name="grupo1" id="checkbox1" [(ngModel)]="aceptedTerms"/>
+            <label for="checkbox1" class="u-txt-blue">Estoy de acuerdo y acepto</label>
+        </div>
+    </div>
+    
+    <div class="u-flex-center u-mt-2">
+        <button mat-flat-button color="primary" class="btn" [ngClass]="{'desac-button': !aceptedTerms}" (click)="processComplete()">Continuar</button>
+    </div>
+</div>

@@ -20,27 +20,24 @@
             <div class="fadeIn animate u-w-100" *ngIf="showCodeInput">
                 <label class="u-txt-medium">Código de verificación</label>
                 <div class="spinner-validator">
-                    <!-- <input type="text" class="u-txt-demibold" maxlength="18" [(ngModel)]="curp" (keyup)="validateInput()"> -->
-                    <input type="text" class="u-txt-demibold" [(ngModel)]="code" (keyup)="validateCode()">
+                    <input type="text" maxlength="9" class="u-txt-demibold" [(ngModel)]="code" (keypress)="validateCode()">
                     <ng-container *ngIf="validCode">
                         <div class="label-spiner-icon u-flex-center" *ngIf="validatingCode">
                             <span class="u-grid-pr u-txt-medium">Validando</span>
-                            <mat-icon svgIcon="ico-spinner" class="u-icon-md spin-active"></mat-icon>
+                            <mat-icon svgIcon="ico-spinner" class="u-icon-sm spin-active"></mat-icon>
                         </div>
                         <div class="label-spiner-icon u-flex-center" *ngIf="!validatingCode">
                             <span class="u-grid-pr u-txt-medium">Código verificado</span>
-                            <mat-icon svgIcon="ico-check" class="u-icon-md"></mat-icon>
+                            <mat-icon svgIcon="ico-check" class="u-icon-sm"></mat-icon>
                         </div>
                     </ng-container>
-                    <ng-container *ngIf="!validCode">
-                        <mat-icon svgIcon="ico-error" class="u-icon-md spiner-icon"></mat-icon>
+                    <ng-container *ngIf="!validCode && code.length > 0">
+                        <mat-icon svgIcon="ico-error" class="u-icon-sm spiner-icon"></mat-icon>
                     </ng-container>
                 </div>
             </div>
         </div>
     </div>
-    <ng-container>
-        <div class="u-flex-center u-mt-3">
-            <button mat-flat-button color="primary" class="btn" [routerLink]="['/phone']" routerLinkActive="router-link-active">Continuar</button>
-        </div>
-    </ng-container>
+    <div class="u-flex-center u-mt-3">
+        <button mat-flat-button color="primary" class="btn" [ngClass]="{'desac-button': !continueButton}" [routerLink]="['/adress']" routerLinkActive="router-link-active">Continuar</button>
+    </div>

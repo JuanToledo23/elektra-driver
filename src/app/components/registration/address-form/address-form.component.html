@@ -1,1 +1,73 @@
-<p>address-form works!</p>
+<div class="main-container">
+    <div class="component-title">Domicilio</div>
+    <div class="block-container info-component u-mt-3">Debe coincidir con tu IFE/INE o un comprobante de domicilio con vigencia de menos de 3 meses.</div>
+    <div class="block-container u-mt-2">
+        <div class="row">
+            <div class="col-5 u-grid-pr">
+                <label class="u-txt-medium">Código postal</label>
+                <div class="spinner-validator">
+                    <input type="text" class="u-txt-demibold" (keyup)="validateForm()" [(ngModel)]="form.codigoPostal">
+                </div>
+            </div>
+            <div class="col-7">
+                <label class="u-txt-medium">Colonia</label>
+                <mat-select class="u-txt-demibold" [(ngModel)]="form.colonia" (selectionChange)="validateForm()">
+                    <mat-option value="opt1">Opción 1</mat-option>
+                    <mat-option value="opt2">Opción 2</mat-option>
+                    <mat-option value="opt3">Opción 3</mat-option>
+                </mat-select>
+            </div>
+        </div>
+        <div class="row u-mt-form">
+            <div class="col-12">
+                <label class="u-txt-medium">Calle</label>
+                <div class="spinner-validator">
+                    <input type="text" class="u-txt-demibold" (keyup)="validateForm()" [(ngModel)]="form.calle">
+                </div>
+            </div>
+        </div>
+        <div class="row u-mt-form">
+            <div class="col-3 u-grid-pr">
+                <label class="u-txt-medium">Exterior</label>
+                <div class="spinner-validator">
+                    <input type="text" class="u-txt-demibold" (keyup)="validateForm()" [(ngModel)]="form.exterior">
+                </div>
+            </div>
+            <div class="col-3 u-grid-pr">
+                <label class="u-txt-medium">Interior</label>
+                <div class="spinner-validator">
+                    <input type="text" class="u-txt-demibold" (keyup)="validateForm()" [(ngModel)]="form.interior">
+                </div>
+            </div>
+            <div class="col-6">
+                <label class="u-txt-medium">Alcaldía</label>
+                <mat-select class="u-txt-demibold" [(ngModel)]="form.alcaldia" (selectionChange)="validateForm()">
+                    <mat-option value="opt1">Opción 1</mat-option>
+                    <mat-option value="opt2">Opción 2</mat-option>
+                    <mat-option value="opt3">Opción 3</mat-option>
+                </mat-select>
+            </div>
+        </div>
+        <div class="row u-mt-form">
+            <div class="col-8 u-grid-pr">
+                <label class="u-txt-medium">Estado o ciudad</label>
+                <mat-select class="u-txt-demibold" [(ngModel)]="form.estadoCiudad" (selectionChange)="validateForm()">
+                    <mat-option value="opt1">Opción 1</mat-option>
+                    <mat-option value="opt2">Opción 2</mat-option>
+                    <mat-option value="opt3">Opción 3</mat-option>
+                </mat-select>
+            </div>
+            <div class="col-4">
+                <label class="u-txt-medium">País</label>
+                <mat-select class="u-txt-demibold" [(ngModel)]="form.pais" (selectionChange)="validateForm()">
+                    <mat-option value="opt1">Opción 1</mat-option>
+                    <mat-option value="opt2">Opción 2</mat-option>
+                    <mat-option value="opt3">Opción 3</mat-option>
+                </mat-select>
+            </div>
+        </div>
+        <div class="u-mt-2"></div>
+    </div>
+    <div class="u-flex-center u-mt-3">
+        <button mat-flat-button color="primary" class="btn" [ngClass]="{'desac-button': !continueButton}" [routerLink]="['/password']" routerLinkActive="router-link-active">Continuar</button>
+    </div>
