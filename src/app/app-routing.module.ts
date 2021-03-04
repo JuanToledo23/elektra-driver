@@ -17,7 +17,7 @@ import { CameraComponent } from './shared/camera/camera.component';
 
 const routes: Routes = [
   {
-    path: '', component: DriverCarOficialIdentificationComponent,
+    path: '', component: HomeScreenComponent,
   },
   {
     path: 'home', component: HomeScreenComponent,
