@@ -1,1 +1,26 @@
-<p>driver-car-tag works!</p>
+<div class="main-container">
+    <div class="block-container">
+        <div class="component-title u-txt-left">TAG de Televía (no se acepta EcoTag)</div>
+    </div>
+    <div class="block-container u-mt-2">
+        <div class="u-txt-medium u-font-size-16">
+            Asegúrate de que se puedan leer fácilmente los detalles.
+        </div>
+        <div class="block-container u-mt-2 u-flex-center">
+            <div class="rectangle-add-img-container" style="height: 240px; width: 202px; border-radius: 20px;" (click)="openCamera()">
+                <div class="agregarImg u-txt-demibold" style="top: 84px;" *ngIf="!carTag">
+                    <img src="assets/img/icons/camera-icon.svg" alt="" class="bg-img-add">
+                    TAG de Televía
+                </div>
+                <img class="bg-img rectangle-picture-cover" [src]="carTag" *ngIf="carTag">
+                <button color="#000" class="btn-camera-rectangle" *ngIf="carTag">
+                    <mat-icon svgIcon="icon-camera"></mat-icon>
+                </button>
+            </div>
+                
+        </div>
+    </div>
+    <div class="u-flex-center u-mt-2">
+        <button mat-flat-button color="primary" class="btn" [ngClass]="{'desac-button': !carTag}" (click)="processComplete()">Continuar</button>
+    </div>
+</div>

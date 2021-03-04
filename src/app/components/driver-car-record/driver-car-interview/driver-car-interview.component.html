@@ -1,1 +1,40 @@
-<p>driver-car-interview works!</p>
+<div class="main-container">
+    <div class="block-container">
+        <div class="component-title u-txt-left">Agenda una entrevista de admisión</div>
+    </div>
+    <div class="block-container u-mt-2">
+        <div class="u-txt-medium u-font-size-16">
+            Queremos conocerte. Selecciona fecha y hora para que uno de nuestros reclutadores te reciba y entreviste.
+        </div>
+    </div>
+    <div class="block-container u-mt-2">
+        <div class="row">
+            <div class="col-6 u-grid-pr">
+                <label class="u-txt-medium">Fecha</label>
+                <mat-select class="u-txt-demibold">
+                    <mat-option value="opt1">Opción 1</mat-option>
+                    <mat-option value="opt2">Opción 2</mat-option>
+                    <mat-option value="opt3">Opción 3</mat-option>
+                </mat-select>
+            </div>
+            <div class="col-6 u-grid-pl">
+                <label class="u-txt-medium">Hora</label>
+                <mat-select class="u-txt-demibold">
+                    <mat-option value="opt1">Opción 1</mat-option>
+                    <mat-option value="opt2">Opción 2</mat-option>
+                    <mat-option value="opt3">Opción 3</mat-option>
+                </mat-select>
+            </div>
+        </div>
+        <div class="address-interview-container u-mt-2">
+            <div class="u-txt-medium">Tu entrevista de admisión será en: </div>
+            <div class="u-txt-demibold">
+                Querétaro 431, El Colorado-Galindo Kilómetro 2.8, C.P. 76246, bodega 70.
+            </div>
+        </div>
+    </div>
+    
+    <div class="u-flex-center u-mt-3">
+        <button mat-flat-button color="primary" class="btn" (click)="processComplete()">Continuar</button>
+    </div>
+</div>

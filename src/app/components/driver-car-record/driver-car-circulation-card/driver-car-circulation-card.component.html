@@ -1,1 +1,64 @@
-<p>driver-car-circulation-card works!</p>
+<div class="main-container">
+    <div class="block-container">
+        <div class="component-title u-txt-left">Tarjeta de circulación vigente</div>
+    </div>
+    <div class="block-container u-mt-1">
+        <div class="u-txt-medium u-font-size-16">
+            Debe ser <strong>vigente</strong>,<strong> original</strong> y <strong>legible.</strong>
+        </div>
+        <div class="block-container u-mt-2 u-flex-center">
+            <div class="add-img-container" (click)="openCamera()">
+                <div class="agregarImg u-txt-demibold" *ngIf="!circulationCard">
+                    <img src="assets/img/icons/camera-icon.svg" alt="" class="bg-img-add">
+                    Tarjeta de circulación
+                </div>
+                <img class="bg-img" [src]="circulationCard" *ngIf="circulationCard">
+                <button color="#000" class="btn-camera" *ngIf="circulationCard">
+                    <mat-icon svgIcon="icon-camera"></mat-icon>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="block-container u-mt-2" *ngIf="circulationCard">
+        <div class="row">
+            <div class="col-12">
+                <label class="u-txt-medium">Nombre del propietario</label>
+                <div class="info-container-label">
+                    Jaun Alberto Venegas López
+                </div>
+            </div>
+        </div>
+        <div class="row u-mt-2">
+            <div class="col-6">
+                <label class="u-txt-medium">Marca</label>
+                <div class="info-container-label">
+                    Chevrolet
+                </div>
+            </div>
+            <div class="col-6">
+                <label class="u-txt-medium">Línea</label>
+                <div class="info-container-label">
+                    Aveo
+                </div>
+            </div>
+        </div>
+        <div class="row u-mt-2">
+            <div class="col-6">
+                <label class="u-txt-medium">Placas</label>
+                <div class="info-container-label">
+                    LVJ8610
+                </div>
+            </div>
+            <div class="col-6">
+                <label class="u-txt-medium">Número de tarjeta</label>
+                <div class="info-container-label">
+                    123456789
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="u-flex-center u-mt-3">
+        <button mat-flat-button color="primary" class="btn" [ngClass]="{'desac-button': !circulationCard}" (click)="processComplete()">Continuar</button>
+    </div>
+</div>

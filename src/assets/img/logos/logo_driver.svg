@@ -14,10 +14,10 @@
                 clip-path: url(#a);
             }
 
-            .d {
+            .d-bold {
                 fill: #333;
                 font-size: 14px;
-                font-family: AvenirNext-Bold, Avenir Next;
+                font-family: 'Avenir_Next_Bold';
                 font-weight: 700;
             }
         </style>
@@ -52,7 +52,7 @@
                         transform="translate(1.872 2.739)" />
                 </g>
             </g>
-        </g><text class="d" transform="translate(11 57)">
+        </g><text class="d-bold" transform="translate(11 57)">
             <tspan x="5.825" y="14">Driver</tspan>
         </text>
     </g>

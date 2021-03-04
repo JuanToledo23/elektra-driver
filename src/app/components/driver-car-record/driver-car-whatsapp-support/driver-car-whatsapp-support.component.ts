@@ -20,7 +20,6 @@ export class DriverCarWhatsappSupportComponent implements OnInit {
   }
 
   processComplete() {
-    this.driverCarService.count++;
     this.driverCarService.updateDriverCarProceedings(1);
     const dialogRef = this.dialog.open(AlertDialog, {
       disableClose: true,

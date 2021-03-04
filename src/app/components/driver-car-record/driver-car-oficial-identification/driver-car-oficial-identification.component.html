@@ -5,23 +5,24 @@
     </div>
     <div class="block-container u-mt-2 u-flex-center">
         <div class="add-img-container" (click)="openCamera(1)">
-            <div class="agregarImg u-txt-demibold" *ngIf="!cameraService.ineFront">
+            <div class="agregarImg u-txt-demibold" *ngIf="!ineFront">
                 <img src="assets/img/icons/camera-icon.svg" alt="" class="bg-img-add">
                 Frente de INE/IFE
             </div>
-            <button color="#000" class="btn-camera" *ngIf="cameraService.ineFront">
+            <img class="bg-img" [src]="ineFront" *ngIf="ineFront">
+            <button color="#000" class="btn-camera" *ngIf="ineFront">
                 <mat-icon svgIcon="icon-camera"></mat-icon>
             </button>
         </div>
     </div>
     <div class="block-container u-mt-2 u-flex-center">
         <div class="add-img-container" (click)="openCamera(2)">
-            <div class="agregarImg u-txt-demibold" *ngIf="!cameraService.ineBack">
+            <div class="agregarImg u-txt-demibold" *ngIf="!ineBack">
                 <img src="assets/img/icons/camera-icon.svg" alt="" class="bg-img-add">
                 Reverso de INE/IFE
             </div>
-            <img class="bg-img" [src]="cameraService.ineBack" *ngIf="cameraService.ineBack">
-            <button color="#000" class="btn-camera" *ngIf="cameraService.ineBack">
+            <img class="bg-img" [src]="ineBack" *ngIf="ineBack">
+            <button color="#000" class="btn-camera" *ngIf="ineBack">
                 <mat-icon svgIcon="icon-camera"></mat-icon>
             </button>
         </div>

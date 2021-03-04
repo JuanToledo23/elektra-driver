@@ -12,33 +12,36 @@ import { HeaderService } from 'src/app/shared/services/header.service';
 })
 export class DriverCarProfilePictureComponent implements OnInit {
 
-  constructor(public headerService: HeaderService, public driverCarService: DriverCarService, public dialog: MatDialog, private router: Router, public cameraService: CameraService) { }
+  profilePicture: string = '';
+
+  constructor(
+    public headerService: HeaderService, 
+    public driverCarService: DriverCarService, 
+    public dialog: MatDialog, 
+    private router: Router, 
+    public cameraService: CameraService
+    ) { }
 
   ngOnInit(): void {
     setTimeout(() => {
       this.headerService.headerElements = {headerVisibility: true, title: '', showDriverIcon: false, showHelp: true}
     }, 1);
-    if(this.cameraService.snapshots.firstSnapshot) {
-      this.cameraService.profilePicture = this.cameraService.getImg().imageAsDataUrl;
-      // this.validarIdentificacion();
-    }
+    this.profilePicture = this.cameraService.getprofilePicture;
   }
 
   openCamera() {
-      this.cameraService.snapshots.secodSnapshot = false;
-      this.router.navigate(['/camera']);
-      this.cameraService.snapshots.firstSnapshot = true;
+    this.cameraService.typePicture = 'profilePicture';
+    this.router.navigate(['/camera']);
   }
 
   processComplete() {
-    this.driverCarService.count++;
     this.driverCarService.updateDriverCarProceedings(3);
     const dialogRef = this.dialog.open(AlertDialog, {
       disableClose: true,
     });
     dialogRef.afterClosed().subscribe(result => {
       if(result) {
-        // this.router.navigate(['/driver-car-profile-picture']);
+        this.router.navigate(['/driver-car-driver-license']);
       } else {
         this.router.navigate(['/driver-car-process']);
       }

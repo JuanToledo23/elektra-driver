@@ -53,3 +53,17 @@
 .btn-camera img {
     width: 100%;
 }
+
+.btn-camera-circle {
+    width: 24px;
+    position: absolute;
+    bottom: 21px;
+    right: 25px;
+    z-index: 20;
+    background-color: transparent;
+    border: none;
+}
+
+.btn-camera-circle img {
+    width: 100%;
+}

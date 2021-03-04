@@ -7,32 +7,22 @@
             Tu <strong>rostro bien iluminado</strong> y la parte superior de tus hombres, no uses lentes ni sombrero.
         </div>
         <div class="block-container u-mt-2 u-flex-center">
-            <div class="add-profile-img-container" (click)="openCamera()">
-                <div class="agregarImg u-txt-demibold" *ngIf="!cameraService.profilePicture">
-                    <img src="assets/img/icons/camera-icon.svg" alt="" class="bg-img-add">
-                    Foto de perfil
+            <div class="u-position-r">
+                <div class="add-profile-img-container" (click)="openCamera()">
+                    <div class="agregarImg u-txt-demibold" *ngIf="!profilePicture">
+                        <img src="assets/img/icons/camera-icon.svg" alt="" class="bg-img-add">
+                        Foto de perfil
+                    </div>
+                    <img class="bg-img profile-picture-cover" [src]="profilePicture" *ngIf="profilePicture">
                 </div>
-                <img class="bg-img profile-picture-cover" [src]="cameraService.profilePicture" *ngIf="cameraService.profilePicture">
-                <button color="#000" class="btn-camera" *ngIf="cameraService.profilePicture">
+                <button color="#000" class="btn-camera-circle" *ngIf="profilePicture">
                     <mat-icon svgIcon="icon-camera"></mat-icon>
                 </button>
             </div>
         </div>
-        <!-- <div class="block-container u-mt-2 u-flex-center">
-            <div class="add-img-container" (click)="openCamera(2)">
-                <div class="agregarImg" *ngIf="!cameraService.profilePicture">
-                    <img src="assets/img/icons/camera-icon.svg" alt="" class="bg-img-add">
-                    Reverso de INE/IFE
-                </div>
-                <img class="bg-img" [src]="cameraService.profilePicture" *ngIf="cameraService.profilePicture">
-                <button color="#000" class="btn-camera" *ngIf="cameraService.profilePicture">
-                    <mat-icon svgIcon="icon-camera"></mat-icon>
-                </button>
-            </div>
-        </div> -->
     </div>
     
     <div class="u-flex-center u-mt-2">
-        <button mat-flat-button color="primary" class="btn" [ngClass]="{'desac-button': !cameraService.profilePicture}" (click)="processComplete()">Continuar</button>
+        <button mat-flat-button color="primary" class="btn" [ngClass]="{'desac-button': !profilePicture}" (click)="processComplete()">Continuar</button>
     </div>
 </div>

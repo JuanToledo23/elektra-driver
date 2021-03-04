@@ -1,1 +1,27 @@
-<p>driver-car-driver-license works!</p>
+<div class="main-container">
+    <div class="block-container">
+        <div class="component-title u-txt-left">Licencia para conducir vigente</div>
+    </div>
+    <div class="block-container u-mt-2">
+        <div class="u-txt-medium u-font-size-16">
+            Debe ser <strong>vigente</strong>,<strong> original</strong> y <strong>legible.</strong>
+        </div>
+        <div class="block-container u-mt-2 u-flex-center">
+            <div class="rectangle-add-img-container" (click)="openCamera()">
+                <div class="agregarImg u-txt-demibold" *ngIf="!driverLicense">
+                    <img src="assets/img/icons/camera-icon.svg" alt="" class="bg-img-add">
+                    Licencia para <br> conducir
+                </div>
+                <img class="bg-img rectangle-picture-cover" [src]="driverLicense" *ngIf="driverLicense">
+                <button color="#000" class="btn-camera-rectangle" *ngIf="driverLicense">
+                    <mat-icon svgIcon="icon-camera"></mat-icon>
+                </button>
+            </div>
+                
+        </div>
+    </div>
+    
+    <div class="u-flex-center u-mt-2">
+        <button mat-flat-button color="primary" class="btn" [ngClass]="{'desac-button': !driverLicense}" (click)="processComplete()">Continuar</button>
+    </div>
+</div>

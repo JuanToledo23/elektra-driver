@@ -29,7 +29,6 @@ export class AddressFormComponent implements OnInit {
   }
 
   validateForm() {
-    console.log(Object.values(this.form))
     Object.values(this.form).forEach(element => {
       this.continueButton = true;
       if(!Object.values(this.form)[4]){

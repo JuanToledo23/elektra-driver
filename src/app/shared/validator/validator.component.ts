@@ -1,0 +1,28 @@
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { HeaderService } from '../services/header.service';
+
+@Component({
+  selector: 'app-validator',
+  templateUrl: './validator.component.html'
+})
+export class ValidatorComponent implements OnInit {
+
+  validating = true;
+
+  constructor(public headerService: HeaderService, private router: Router) { }
+
+  ngOnInit(): void {
+    setTimeout(() => {
+      this.headerService.headerElements = {headerVisibility: false, title: '', showDriverIcon: false, showHelp: false}
+    }, 1);
+
+    setTimeout(() => {
+      this.validating = false;
+      setTimeout(() => {
+        this.router.navigate(['/driver-car-profile-picture']);
+      }, 500);
+    }, 3000);
+  }
+
+}

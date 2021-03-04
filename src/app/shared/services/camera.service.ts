@@ -10,14 +10,16 @@ export class CameraService {
 
     constructor(public location: Location) { }
 
+    typePicture: string = '';
+
     ineFront: string = '';
     ineBack: string = '';
     profilePicture: string = '';
+    driverLicense: string = '';
+    carInsurance: string = '';
+    circulationCard: string = '';
+    carTag: string = '';
     
-    snapshots = {
-        firstSnapshot: false,
-        secodSnapshot: false,
-    };
 
     // showWebcam = true;
     allowCameraSwitch = true;
@@ -49,12 +51,60 @@ export class CameraService {
     }
 
     handleImage(webcamImage: any): void {
-        console.log(webcamImage);
         this.webcamImage = webcamImage;
+
+        switch(this.typePicture){
+            case 'ineFront': 
+                this.ineFront = this.webcamImage._imageAsDataUrl;
+            break;
+            case 'ineBack': 
+                this.ineBack = this.webcamImage._imageAsDataUrl;
+            break;
+            case 'profilePicture': 
+                this.profilePicture = this.webcamImage._imageAsDataUrl;
+            break;
+            case 'driverLicense': 
+                this.driverLicense = this.webcamImage._imageAsDataUrl;
+            break;
+            case 'carInsurance': 
+                this.carInsurance = this.webcamImage._imageAsDataUrl;
+            break;
+            case 'circulationCard': 
+                this.circulationCard = this.webcamImage._imageAsDataUrl;
+            break;
+            case 'carTag': 
+                this.carTag = this.webcamImage._imageAsDataUrl;
+            break;
+
+        }
     }
 
-    getImg() {;
-        return this.webcamImage;
+    get getPictureIneFront() {
+        return this.ineFront;
+    }
+
+    get getPictureIneBack() {
+        return this.ineBack;
+    }
+
+    get getprofilePicture() {
+        return this.profilePicture;
+    }
+
+    get getDriverLicense() {
+        return this.driverLicense;
+    }
+    
+    get getCarInsurance() {
+        return this.carInsurance;
+    }
+
+    get getCirculationCard() {
+        return this.circulationCard;
+    }
+
+    get getCarTag() {
+        return this.carTag;
     }
 
     get triggerObservable(): Observable<void> {
@@ -63,6 +113,10 @@ export class CameraService {
 
     get nextWebcamObservable(): Observable<boolean | string> {
         return this.nextWebcam.asObservable();
+    }
+
+    get ineFrontPricture() {
+        return this.ineFront;
     }
 
 }

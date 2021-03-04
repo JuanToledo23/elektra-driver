@@ -22,7 +22,6 @@ export class DriverCarLegalAgreementComponent implements OnInit {
   }
 
   processComplete() {
-    this.driverCarService.count++;
     this.driverCarService.updateDriverCarProceedings(0);
     const dialogRef = this.dialog.open(AlertDialog, {
       disableClose: true,
@@ -35,7 +34,4 @@ export class DriverCarLegalAgreementComponent implements OnInit {
       }
     });
   }
-
-
-
 }

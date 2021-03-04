@@ -35,6 +35,7 @@ import { DriverCarInsuranceComponent } from './components/driver-car-record/driv
 import { DriverCarCirculationCardComponent } from './components/driver-car-record/driver-car-circulation-card/driver-car-circulation-card.component';
 import { DriverCarTagComponent } from './components/driver-car-record/driver-car-tag/driver-car-tag.component';
 import { DriverCarInterviewComponent } from './components/driver-car-record/driver-car-interview/driver-car-interview.component';
+import { ValidatorComponent } from './shared/validator/validator.component';
 
 @NgModule({
   declarations: [
@@ -59,7 +60,8 @@ import { DriverCarInterviewComponent } from './components/driver-car-record/driv
     DriverCarInsuranceComponent,
     DriverCarCirculationCardComponent,
     DriverCarTagComponent,
-    DriverCarInterviewComponent
+    DriverCarInterviewComponent,
+    ValidatorComponent
   ],
   imports: [
     BrowserModule,
