@@ -62,3 +62,65 @@
 .process-complete-container:last-of-type {
     border-bottom: solid 1px #EBEBEB;
 }
+
+.add-img-container {
+    border: 1px dashed #9E9E9E;
+    position: relative;
+    min-height: 146px;
+    display: flex;
+    align-items: center;
+    width: 234px;
+    background: #F7F7F7;
+    border-radius: 8px;
+}
+.add-img-container .agregarImg {
+    color: #666666;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    text-align: center;
+    left: 0;
+    right: 0;
+    top: 43px;
+}
+.add-img-container .bg-img-add {
+    width: 31px;
+    margin: 0 auto 10px auto;
+}
+
+.add-profile-img-container {
+    border: 1px dashed #9E9E9E;
+    position: relative;
+    min-height: 231px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 231px;
+    background: #F7F7F7;
+    height: 231px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.add-profile-img-container .agregarImg {
+    color: #666666;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    text-align: center;
+    left: 0;
+    right: 0;
+    top: 90px;
+}
+.add-profile-img-container .bg-img-add {
+    width: 31px;
+    margin: 0 auto 10px auto;
+}
+
+.profile-picture-cover {
+    height: 231px;
+    width: 231px;
+    object-fit: cover;
+}

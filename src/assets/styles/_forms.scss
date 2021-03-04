@@ -32,3 +32,21 @@ mat-select {
     margin-top: 4px;
     font-size: 16px;
 }
+
+input.inputfile-identificacion {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    z-index: -1;
+}
+.inputfile-identificacion + label {
+    cursor: pointer;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    min-height: 146px;
+    margin-left: -28px;
+}

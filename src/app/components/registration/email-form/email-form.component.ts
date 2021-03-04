@@ -22,7 +22,9 @@ export class EmailFormComponent implements OnInit {
   constructor(public headerService: HeaderService) { }
 
   ngOnInit(): void {
-    this.headerService.headerElements = {title: '¡Bienvenido, Juan!', showDriverIcon: false, showHelp: false}
+    setTimeout(() => {
+      this.headerService.headerElements = {headerVisibility: true, title: '¡Bienvenido, Juan!', showDriverIcon: false, showHelp: false}
+    }, 1);
   }
 
   validateEmail1() {

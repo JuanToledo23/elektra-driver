@@ -1,0 +1,32 @@
+<div class="main-container">
+    <div class="component-title">Identificación oficial vigente</div>
+    <div class="block-container info-component u-mt-2">
+        Toma foto del <strong>frente</strong> y <strong>reverso</strong> de tu INE/IFE. Debe ser <strong>vigente, original y legible</strong>.
+    </div>
+    <div class="block-container u-mt-2 u-flex-center">
+        <div class="add-img-container" (click)="openCamera(1)">
+            <div class="agregarImg u-txt-demibold" *ngIf="!cameraService.ineFront">
+                <img src="assets/img/icons/camera-icon.svg" alt="" class="bg-img-add">
+                Frente de INE/IFE
+            </div>
+            <button color="#000" class="btn-camera" *ngIf="cameraService.ineFront">
+                <mat-icon svgIcon="icon-camera"></mat-icon>
+            </button>
+        </div>
+    </div>
+    <div class="block-container u-mt-2 u-flex-center">
+        <div class="add-img-container" (click)="openCamera(2)">
+            <div class="agregarImg u-txt-demibold" *ngIf="!cameraService.ineBack">
+                <img src="assets/img/icons/camera-icon.svg" alt="" class="bg-img-add">
+                Reverso de INE/IFE
+            </div>
+            <img class="bg-img" [src]="cameraService.ineBack" *ngIf="cameraService.ineBack">
+            <button color="#000" class="btn-camera" *ngIf="cameraService.ineBack">
+                <mat-icon svgIcon="icon-camera"></mat-icon>
+            </button>
+        </div>
+    </div>
+    <div class="u-flex-center u-mt-2">
+        <button mat-flat-button color="primary" class="btn" [ngClass]="{'desac-button': !activarButtonContinuar}" (click)="processComplete()">Continuar</button>
+    </div>
+</div>

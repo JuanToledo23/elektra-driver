@@ -16,10 +16,13 @@ export class DriverCarLegalAgreementComponent implements OnInit {
   constructor(public headerService: HeaderService, public driverCarService: DriverCarService, public dialog: MatDialog, private router: Router) { }
 
   ngOnInit(): void {
-    this.headerService.headerElements = {title: '', showDriverIcon: false, showHelp: true}
+    setTimeout(() => {
+      this.headerService.headerElements = {headerVisibility: true, title: '', showDriverIcon: false, showHelp: true}
+    }, 1);
   }
 
   processComplete() {
+    this.driverCarService.count++;
     this.driverCarService.updateDriverCarProceedings(0);
     const dialogRef = this.dialog.open(AlertDialog, {
       disableClose: true,

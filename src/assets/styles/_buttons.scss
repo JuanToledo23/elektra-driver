@@ -40,3 +40,16 @@
     min-width: unset !important;
     width: 84px !important;
 }
+
+.btn-camera{
+    width: 24px;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    z-index: 20;
+    background-color: transparent;
+    border: none;
+}
+.btn-camera img {
+    width: 100%;
+}

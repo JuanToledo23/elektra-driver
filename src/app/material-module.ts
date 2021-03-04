@@ -46,6 +46,18 @@ export class MaterialModule {
       this.domSanitizer.bypassSecurityTrustResourceUrl("assets/img/icons/green_check.svg")
     );
     this.matIconRegistry.addSvgIcon(
+      "ico-arrow",
+      this.domSanitizer.bypassSecurityTrustResourceUrl("assets/img/icons/arrow.svg")
+    );
+    this.matIconRegistry.addSvgIcon(
+      "icon-camera",
+      this.domSanitizer.bypassSecurityTrustResourceUrl("assets/img/icons/btn-camera.svg")
+    );
+    this.matIconRegistry.addSvgIcon(
+      "icon-shutter-camera",
+      this.domSanitizer.bypassSecurityTrustResourceUrl("assets/img/icons/shutter_camera.svg")
+    );
+    this.matIconRegistry.addSvgIcon(
       "logo-driver",
       this.domSanitizer.bypassSecurityTrustResourceUrl("assets/img/logos/logo_driver.svg")
     );

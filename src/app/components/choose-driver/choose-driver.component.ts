@@ -10,7 +10,9 @@ export class ChooseDriverComponent implements OnInit {
   constructor(public headerService: HeaderService) { }
 
   ngOnInit(): void {
-    this.headerService.headerElements = {title: '', showDriverIcon: true, showHelp: true}
+    setTimeout(() => {
+      this.headerService.headerElements = {headerVisibility: true, title: '', showDriverIcon: true, showHelp: true}
+    }, 1);
   }
 
 }

@@ -1,0 +1,21 @@
+<div class="camera-container">
+    <div class="camera-wrapper">
+        <webcam class="camera" [trigger]="cameraService.triggerObservable" (imageCapture)="cameraService.handleImage($event)"
+            [allowCameraSwitch]="cameraService.allowCameraSwitch" [switchCamera]="cameraService.nextWebcamObservable"
+            [imageQuality]="1"
+            (initError)="cameraService.handleInitError($event)"
+        ></webcam>
+        <div class="border">
+            <div class="corner top-left"></div>
+            <div class="corner top-right"></div>
+            <div class="corner bottom-left"></div>
+            <div class="corner bottom-right"></div>
+        </div>
+    </div>
+    <div class="sutter-container">
+        <button mat-icon-button class="example-icon" aria-label="Snapshot" (click)="cameraService.triggerSnapshot()">
+            <mat-icon svgIcon="icon-shutter-camera"></mat-icon>
+        </button>
+    </div>
+</div>
+

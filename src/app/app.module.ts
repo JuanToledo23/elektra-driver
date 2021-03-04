@@ -21,9 +21,20 @@ import { DriverCarProcessComponent } from './components/driver-car-record/driver
 import { DriverCarLegalAgreementComponent } from './components/driver-car-record/driver-car-legal-agreement/driver-car-legal-agreement.component';
 import { AlertDialog } from './shared/dialogs/alert-dialog/alert.dialog';
 import { DriverCarWhatsappSupportComponent } from './components/driver-car-record/driver-car-whatsapp-support/driver-car-whatsapp-support.component';
+import { AnimacionRegistrar } from './components/home-screen/animacion-registrar/animacion-registrar.component';
+import { DriverCarOficialIdentificationComponent } from './components/driver-car-record/driver-car-oficial-identification/driver-car-oficial-identification.component';
 export function playerFactory(){
   return player;
 }
+
+import { WebcamModule } from 'ngx-webcam';
+import { CameraComponent } from './shared/camera/camera.component';
+import { DriverCarProfilePictureComponent } from './components/driver-car-record/driver-car-profile-picture/driver-car-profile-picture.component';
+import { DriverCarDriverLicenseComponent } from './components/driver-car-record/driver-car-driver-license/driver-car-driver-license.component';
+import { DriverCarInsuranceComponent } from './components/driver-car-record/driver-car-insurance/driver-car-insurance.component';
+import { DriverCarCirculationCardComponent } from './components/driver-car-record/driver-car-circulation-card/driver-car-circulation-card.component';
+import { DriverCarTagComponent } from './components/driver-car-record/driver-car-tag/driver-car-tag.component';
+import { DriverCarInterviewComponent } from './components/driver-car-record/driver-car-interview/driver-car-interview.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +50,16 @@ export function playerFactory(){
     DriverCarProcessComponent,
     DriverCarLegalAgreementComponent,
     AlertDialog,
-    DriverCarWhatsappSupportComponent
+    DriverCarWhatsappSupportComponent,
+    AnimacionRegistrar,
+    DriverCarOficialIdentificationComponent,
+    CameraComponent,
+    DriverCarProfilePictureComponent,
+    DriverCarDriverLicenseComponent,
+    DriverCarInsuranceComponent,
+    DriverCarCirculationCardComponent,
+    DriverCarTagComponent,
+    DriverCarInterviewComponent
   ],
   imports: [
     BrowserModule,
@@ -52,6 +72,7 @@ export function playerFactory(){
       player: playerFactory,
       useCache: true
     }),
+    WebcamModule
   ],
   entryComponents: [
     AlertDialog

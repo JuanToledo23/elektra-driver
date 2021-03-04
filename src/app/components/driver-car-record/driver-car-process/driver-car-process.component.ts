@@ -14,9 +14,14 @@ export class DriverCarProcessComponent implements OnInit {
   constructor(public headerService: HeaderService, public driverCarService: DriverCarService) { }
 
   ngOnInit(): void {
-    this.headerService.headerElements = {title: '', showDriverIcon: true, showHelp: true}
+    setTimeout(() => {
+      this.headerService.headerElements = {headerVisibility: true, title: '', showDriverIcon: true, showHelp: true}
+    }, 1);
     this.driverCarProceedings = this.driverCarService.getDriverCarProceedings();
     this.driverCarProceedingsComplete = this.driverCarService.getDriverCarProceedingsComplete();
+    if(this.driverCarService.count === 0) {
+      this.driverCarService.driverCarProceedings[0].nextStep = true;
+    }
   }
 
 }

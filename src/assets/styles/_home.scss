@@ -1,0 +1,64 @@
+
+.home-container > div:first-of-type svg {
+    height: 100vh;
+}
+.logoEKT {
+    position: absolute;
+    top: 37%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+.logoEKT img {
+    margin: 0 auto;
+    display: block;
+}
+
+.bloqueInicio {
+    margin-top: 63px;
+}
+
+.parent {
+    position: relative;
+    height: 100%;
+    width: 200%;
+    display: flex;    
+    div { flex: 1; } 
+}
+
+.contenedorImgRight {
+    width: 477px;
+    height: 284px;
+    margin: 0 auto;
+}
+
+.iconoUbicacion {
+    position: absolute;
+    top: 0;
+    left: 57%;
+    opacity: 0;
+	animation: fadeIn 0.5s ease-in both;
+    animation-delay: 0.5s;
+    width: 40px;
+}
+.iconoUbicacion img {
+    width: 100%;;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translate3d(0, -20%, 0);
+	}
+	to {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+.add-img-container .bg-img {
+    width: 100%;
+    min-width: 234px;
+    height: 146px;
+    object-fit: scale-down;
+}

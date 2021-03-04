@@ -6,7 +6,10 @@ import { Location } from '@angular/common';
 })
 export class HeaderService {
 
+    
+
     headerElements = {
+        headerVisibility: true,
         title: 'Registro',
         showDriverIcon: false,
         showHelp: false

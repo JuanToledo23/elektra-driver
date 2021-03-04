@@ -18,7 +18,9 @@ export class CurpFormComponent implements OnInit {
 
   ngOnInit(): void {
     this.validateInput();
-    this.headerService.headerElements = {title: 'Registro', showDriverIcon: false, showHelp: false}
+    setTimeout(() => {
+      this.headerService.headerElements = {headerVisibility: true, title: 'Registro', showDriverIcon: false, showHelp: false}
+    }, 1);
   }
 
 
