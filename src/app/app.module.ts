@@ -17,25 +17,26 @@ import { LottieModule } from 'ngx-lottie';
 import player from 'lottie-web';
 import { HomeScreenComponent } from './components/home-screen/home-screen.component';
 import { ChooseDriverComponent } from './components/choose-driver/choose-driver.component';
-import { DriverCarProcessComponent } from './components/driver-car-record/driver-car-process/driver-car-process.component';
-import { DriverCarLegalAgreementComponent } from './components/driver-car-record/driver-car-legal-agreement/driver-car-legal-agreement.component';
+import { DriverCarProcessComponent } from './components/driver-car-process/driver-car-process.component';
+import { DriverCarLegalAgreementComponent } from './components/driver-car-process/steps/driver-car-legal-agreement/driver-car-legal-agreement.component';
 import { AlertDialog } from './shared/dialogs/alert-dialog/alert.dialog';
-import { DriverCarWhatsappSupportComponent } from './components/driver-car-record/driver-car-whatsapp-support/driver-car-whatsapp-support.component';
+import { DriverCarWhatsappSupportComponent } from './components/driver-car-process/steps/driver-car-whatsapp-support/driver-car-whatsapp-support.component';
 import { AnimacionRegistrar } from './components/home-screen/animacion-registrar/animacion-registrar.component';
-import { DriverCarOficialIdentificationComponent } from './components/driver-car-record/driver-car-oficial-identification/driver-car-oficial-identification.component';
+import { DriverCarOficialIdentificationComponent } from './components/driver-car-process/steps/driver-car-oficial-identification/driver-car-oficial-identification.component';
 export function playerFactory(){
   return player;
 }
 
 import { WebcamModule } from 'ngx-webcam';
 import { CameraComponent } from './shared/camera/camera.component';
-import { DriverCarProfilePictureComponent } from './components/driver-car-record/driver-car-profile-picture/driver-car-profile-picture.component';
-import { DriverCarDriverLicenseComponent } from './components/driver-car-record/driver-car-driver-license/driver-car-driver-license.component';
-import { DriverCarInsuranceComponent } from './components/driver-car-record/driver-car-insurance/driver-car-insurance.component';
-import { DriverCarCirculationCardComponent } from './components/driver-car-record/driver-car-circulation-card/driver-car-circulation-card.component';
-import { DriverCarTagComponent } from './components/driver-car-record/driver-car-tag/driver-car-tag.component';
-import { DriverCarInterviewComponent } from './components/driver-car-record/driver-car-interview/driver-car-interview.component';
+import { DriverCarProfilePictureComponent } from './components/driver-car-process/steps/driver-car-profile-picture/driver-car-profile-picture.component';
+import { DriverCarDriverLicenseComponent } from './components/driver-car-process/steps/driver-car-driver-license/driver-car-driver-license.component';
+import { DriverCarInsuranceComponent } from './components/driver-car-process/steps/driver-car-insurance/driver-car-insurance.component';
+import { DriverCarCirculationCardComponent } from './components/driver-car-process/steps/driver-car-circulation-card/driver-car-circulation-card.component';
+import { DriverCarTagComponent } from './components/driver-car-process/steps/driver-car-tag/driver-car-tag.component';
+import { DriverCarInterviewComponent } from './components/driver-car-process/steps/driver-car-interview/driver-car-interview.component';
 import { ValidatorComponent } from './shared/validator/validator.component';
+import { InterviewAppointedComponent } from './shared/interview-appointed/interview-appointed.component';
 
 @NgModule({
   declarations: [
@@ -61,7 +62,8 @@ import { ValidatorComponent } from './shared/validator/validator.component';
     DriverCarCirculationCardComponent,
     DriverCarTagComponent,
     DriverCarInterviewComponent,
-    ValidatorComponent
+    ValidatorComponent,
+    InterviewAppointedComponent
   ],
   imports: [
     BrowserModule,

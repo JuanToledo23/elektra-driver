@@ -20,7 +20,7 @@ export class ValidatorComponent implements OnInit {
     setTimeout(() => {
       this.validating = false;
       setTimeout(() => {
-        this.router.navigate(['/driver-car-profile-picture']);
+        this.router.navigate(['/driver-car-interview-appointed']);
       }, 500);
     }, 3000);
   }

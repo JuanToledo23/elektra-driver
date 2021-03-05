@@ -31,3 +31,62 @@
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
 }
+
+.titulo-copy {
+    font-size: 44px;
+    font-family: $font-bold;
+    margin: 40px auto;
+}
+.u-texto-verde {
+    color: #3FAE2B;
+}
+.u-lh-22 {
+    line-height: 22px;
+}
+.animacion-colaboradores {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    height: 235px;
+}
+.colaborador-1 {
+    width: 100%;
+    animation: enterLeft 0.7s ease-in both;
+    animation-delay: 1.3s;
+    margin-left: -42px;
+}
+.colaborador-1 img {
+    height: 293px;
+}
+.colaborador-2 {
+    animation: enterRight 0.7s ease-in both;
+    animation-delay: 1.5s;
+    position: absolute;
+    top: 0;
+    right: -8px;
+}
+.colaborador-2 img {
+    height: 290px;
+}
+
+@keyframes enterLeft {
+    from {
+		opacity: 0;
+		transform: translateX(-70%);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0%);
+	}
+}
+
+@keyframes enterRight {
+    from {
+		opacity: 0;
+		transform: translateX(70%);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0%);
+	}
+}

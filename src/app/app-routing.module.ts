@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ChooseDriverComponent } from './components/choose-driver/choose-driver.component';
-import { DriverCarCirculationCardComponent } from './components/driver-car-record/driver-car-circulation-card/driver-car-circulation-card.component';
-import { DriverCarDriverLicenseComponent } from './components/driver-car-record/driver-car-driver-license/driver-car-driver-license.component';
-import { DriverCarInsuranceComponent } from './components/driver-car-record/driver-car-insurance/driver-car-insurance.component';
-import { DriverCarInterviewComponent } from './components/driver-car-record/driver-car-interview/driver-car-interview.component';
-import { DriverCarLegalAgreementComponent } from './components/driver-car-record/driver-car-legal-agreement/driver-car-legal-agreement.component';
-import { DriverCarOficialIdentificationComponent } from './components/driver-car-record/driver-car-oficial-identification/driver-car-oficial-identification.component';
-import { DriverCarProcessComponent } from './components/driver-car-record/driver-car-process/driver-car-process.component';
-import { DriverCarProfilePictureComponent } from './components/driver-car-record/driver-car-profile-picture/driver-car-profile-picture.component';
-import { DriverCarTagComponent } from './components/driver-car-record/driver-car-tag/driver-car-tag.component';
-import { DriverCarWhatsappSupportComponent } from './components/driver-car-record/driver-car-whatsapp-support/driver-car-whatsapp-support.component';
+import { DriverCarCirculationCardComponent } from './components/driver-car-process/steps/driver-car-circulation-card/driver-car-circulation-card.component';
+import { DriverCarDriverLicenseComponent } from './components/driver-car-process/steps/driver-car-driver-license/driver-car-driver-license.component';
+import { DriverCarInsuranceComponent } from './components/driver-car-process/steps/driver-car-insurance/driver-car-insurance.component';
+import { DriverCarInterviewComponent } from './components/driver-car-process/steps/driver-car-interview/driver-car-interview.component';
+import { DriverCarLegalAgreementComponent } from './components/driver-car-process/steps/driver-car-legal-agreement/driver-car-legal-agreement.component';
+import { DriverCarOficialIdentificationComponent } from './components/driver-car-process/steps/driver-car-oficial-identification/driver-car-oficial-identification.component';
+import { DriverCarProcessComponent } from './components/driver-car-process/driver-car-process.component';
+import { DriverCarProfilePictureComponent } from './components/driver-car-process/steps/driver-car-profile-picture/driver-car-profile-picture.component';
+import { DriverCarTagComponent } from './components/driver-car-process/steps/driver-car-tag/driver-car-tag.component';
+import { DriverCarWhatsappSupportComponent } from './components/driver-car-process/steps/driver-car-whatsapp-support/driver-car-whatsapp-support.component';
 import { HomeScreenComponent } from './components/home-screen/home-screen.component';
 import { AddressFormComponent } from './components/registration/address-form/address-form.component';
 import { CurpFormComponent } from './components/registration/curp-form/curp-form.component';
@@ -19,11 +19,12 @@ import { PasswordFormComponent } from './components/registration/password-form/p
 import { PhoneFormComponent } from './components/registration/phone-form/phone-form.component';
 import { CameraComponent } from './shared/camera/camera.component';
 import { ValidatorComponent } from './shared/validator/validator.component';
+import { InterviewAppointedComponent } from './shared/interview-appointed/interview-appointed.component';
 
 
 const routes: Routes = [
   {
-    path: '', component: ValidatorComponent,
+    path: '', component: HomeScreenComponent,
   },
   {
     path: 'home', component: HomeScreenComponent,
@@ -75,6 +76,9 @@ const routes: Routes = [
   },
   {
     path: 'driver-car-interview', component: DriverCarInterviewComponent,
+  },
+  {
+    path: 'driver-car-interview-appointed', component: InterviewAppointedComponent,
   },
   {
     path: 'camera', component: CameraComponent,
