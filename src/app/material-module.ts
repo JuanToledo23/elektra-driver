@@ -58,6 +58,10 @@ export class MaterialModule {
       this.domSanitizer.bypassSecurityTrustResourceUrl("assets/img/icons/shutter_camera.svg")
     );
     this.matIconRegistry.addSvgIcon(
+      "ico-send",
+      this.domSanitizer.bypassSecurityTrustResourceUrl("assets/img/icons/send.svg")
+    );
+    this.matIconRegistry.addSvgIcon(
       "logo-driver",
       this.domSanitizer.bypassSecurityTrustResourceUrl("assets/img/logos/logo_driver.svg")
     );

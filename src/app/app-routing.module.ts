@@ -20,6 +20,7 @@ import { PhoneFormComponent } from './components/registration/phone-form/phone-f
 import { CameraComponent } from './shared/camera/camera.component';
 import { ValidatorComponent } from './shared/validator/validator.component';
 import { InterviewAppointedComponent } from './shared/interview-appointed/interview-appointed.component';
+import { HelpComponent } from './shared/help/help.component';
 
 
 const routes: Routes = [
@@ -85,6 +86,9 @@ const routes: Routes = [
   },
   {
     path: 'validator', component: ValidatorComponent,
+  },
+  {
+    path: 'help', component: HelpComponent,
   },
 ];
 

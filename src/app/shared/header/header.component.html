@@ -7,6 +7,7 @@
         <mat-icon svgIcon="logo-driver" class="u-icon-md u-txt-medium" *ngIf="headerService.headerElements.showDriverIcon"></mat-icon>
     </div>
     <div>
-        <button mat-flat-button color="primary" class="btn help-button u-font-size-12" *ngIf="headerService.headerElements.showHelp"><strong>Ayuda</strong></button>
+        <button mat-flat-button color="primary" class="btn help-button u-font-size-12" *ngIf="headerService.headerElements.showHelp"  
+        [routerLink]="['/help']" routerLinkActive="router-link-active"><strong>Ayuda</strong></button>
     </div>
 </mat-toolbar>

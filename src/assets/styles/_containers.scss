@@ -39,7 +39,7 @@
 
 .process-container {
     border-top: solid 1px #EBEBEB;
-    padding: 10px 32px;
+    padding: 0px 32px;
     cursor: pointer;
     outline: none;
 }
@@ -204,4 +204,92 @@
     margin: 0 auto;
     overflow: hidden;
     max-height: 896px;
+}
+
+.message-box-container {
+    box-shadow: 0px -3px 5px 0px #d6dad7;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    max-width: 414px;
+    left: 0;
+    display: flex;
+    padding: 0px 16px;
+    box-sizing: border-box;
+    height: 58px;
+    align-items: center;
+    background-color: white;
+}
+
+.message-box-container > textarea {
+    width: 89%;
+    font-family: "Avenir_Next_Regular";
+    border: unset;
+    outline: none;
+    padding: 6px 7px;
+    resize: none;
+    resize: none;
+    margin-top: 10px;
+}
+.message-box-container mat-icon {
+    width: 30px;
+    height: 26x;
+}
+
+.chat-info {
+    color: #D1D1D2;
+    font-size: 30px;
+    margin-top: 125px;
+    text-align: center;
+}
+
+.messages {
+    position: relative;
+    padding-bottom: 60px;
+}
+
+.client-message {
+    background-color: #dcf8c6;
+    color: #333;
+    padding: 6px 7px 8px 9px;
+    border-radius: 7.5px;
+    position: relative;
+    max-width: 75%;
+    right: 0;
+    margin-bottom: 4px;
+    overflow-wrap: break-word;
+}
+
+.client-message::after {
+    content: " ";
+    position: absolute;
+    top: 0;
+    right: -8px;
+    margin-left: -5px;
+    border-width: 9px;
+    border-style: solid;
+    border-color: #dcf8c6 transparent transparent transparent;
+}
+
+.server-message {
+    background-color: #e2e2e2;
+    color: #333;
+    padding: 6px 7px 8px 9px;
+    border-radius: 7.5px;
+    position: relative;
+    max-width: 75%;
+    right: 0;
+    margin-bottom: 4px;
+    overflow-wrap: break-word;
+}
+
+.server-message::after {
+    content: " ";
+    position: absolute;
+    top: 0;
+    margin-left: -5px;
+    left: -3px;
+    border-width: 9px;
+    border-style: solid;
+    border-color: #e2e2e2 transparent transparent transparent;
 }

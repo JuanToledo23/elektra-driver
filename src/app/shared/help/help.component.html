@@ -1,1 +1,20 @@
-<p>help works!</p>
+<div class="main-container">
+    <div class="chat-container">
+        <div class="chat-info" *ngIf="messages.length === 0">
+            Escríbenos tus dudas, estamos para ayudarte.
+        </div>
+        <div class="messages">
+            <div *ngFor="let message of messages" class="u-flex" [ngClass]="{'u-flex-end': message.type === 'client'}">
+                <div [ngClass]="{'client-message': message.type === 'client', 'server-message': message.type === 'server'}">
+                    {{message.message}}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="message-box-container">
+        <textarea placeholder="Escribe tu mensaje" [(ngModel)]="messageText"></textarea>
+        <button mat-icon-button class="example-icon" aria-label="Enviar" (click)="sendMessage()">
+            <mat-icon svgIcon="ico-send"></mat-icon>
+        </button>
+    </div>
+</div>
