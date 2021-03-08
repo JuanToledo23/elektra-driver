@@ -24,7 +24,7 @@ import {
                 transform: 'translateY(30%)'
             })),
             transition('* => *', [
-                animate(600)
+                animate(800)
             ]),
         ]),
     ],

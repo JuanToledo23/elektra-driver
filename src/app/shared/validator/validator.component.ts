@@ -13,16 +13,16 @@ export class ValidatorComponent implements OnInit {
   constructor(public headerService: HeaderService, private router: Router) { }
 
   ngOnInit(): void {
-    setTimeout(() => {
-      this.headerService.headerElements = {headerVisibility: false, title: '', showDriverIcon: false, showHelp: false}
-    }, 1);
+    // setTimeout(() => {
+    //   this.headerService.headerElements = {headerVisibility: false, title: '', showDriverIcon: false, showHelp: false}
+    // }, 1);
 
-    setTimeout(() => {
-      this.validating = false;
-      setTimeout(() => {
-        this.router.navigate(['/driver-car-interview-appointed']);
-      }, 500);
-    }, 3000);
+    // setTimeout(() => {
+    //   this.validating = false;
+    //   setTimeout(() => {
+    //     this.router.navigate(['/driver-car-interview-appointed']);
+    //   }, 500);
+    // }, 3000);
   }
 
 }

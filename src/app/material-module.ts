@@ -39,7 +39,7 @@ export class MaterialModule {
     );
     this.matIconRegistry.addSvgIcon(
       "ico-spinner",
-      this.domSanitizer.bypassSecurityTrustResourceUrl("assets/img/icons/spinner.svg")
+      this.domSanitizer.bypassSecurityTrustResourceUrl("assets/img/icons/check-circle.svg")
     );
     this.matIconRegistry.addSvgIcon(
       "ico-green-check",

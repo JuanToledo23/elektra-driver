@@ -17,7 +17,7 @@ export class PasswordFormComponent implements OnInit {
 
   correctForm: boolean = false;
 
-  passwRe: RegExp = /^.*(?=.{8,})(?=.*[a-zA-Z])(?=.*\d)(?=.*[!&$%&?+*¿¡!# "]).*$/;
+  passwRe: RegExp = /^.*(?=.{8,})(?=.*[a-zA-Z])(?=.*\d)(?=.*["!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~"]).*$/;
 
 
   constructor(public headerService: HeaderService) { }

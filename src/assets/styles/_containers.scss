@@ -51,7 +51,10 @@
     outline: none;
 }
 
-.border-process:last-of-type  {
+.process-parent {
+    box-shadow: 0px 22px 31px -11px rgb(219 219 219);
+}
+.process-parent .border-process:last-of-type  {
     border-bottom: solid 1px #EBEBEB;
 }
 
@@ -170,6 +173,9 @@
     font-family: $font-demibold;
     margin-left: 16px;
     margin-top: 16px;
+    background-color: #FAFAFA;
+    border-radius: 4px;
+    padding: 10px 16px;
 }
 
 .address-interview-container {
@@ -195,4 +201,7 @@
 
 .app-wrapper {
     max-width: 414px;
+    margin: 0 auto;
+    overflow: hidden;
+    max-height: 896px;
 }
