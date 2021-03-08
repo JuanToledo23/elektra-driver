@@ -2,7 +2,7 @@
     <div class="camera-wrapper">
         <webcam class="camera" [trigger]="cameraService.triggerObservable" (imageCapture)="cameraService.handleImage($event)"
             [allowCameraSwitch]="cameraService.allowCameraSwitch" [switchCamera]="cameraService.nextWebcamObservable"
-            [imageQuality]="1"
+            [imageQuality]="0.1"
             (initError)="cameraService.handleInitError($event)"
         ></webcam>
         <div class="border">

@@ -1,10 +1,14 @@
 
+.home-container {
+    height: 640px;
+    min-height: 640px;
+}
 .home-container > div:first-of-type svg {
     height: 100vh;
 }
 .logoEKT {
     position: absolute;
-    top: 37%;
+    top: 259px;
     left: 0;
     right: 0;
     margin: 0 auto;
