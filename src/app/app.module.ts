@@ -37,6 +37,7 @@ import { DriverCarTagComponent } from './components/driver-car-process/steps/dri
 import { DriverCarInterviewComponent } from './components/driver-car-process/steps/driver-car-interview/driver-car-interview.component';
 import { ValidatorComponent } from './shared/validator/validator.component';
 import { InterviewAppointedComponent } from './shared/interview-appointed/interview-appointed.component';
+import { HelpComponent } from './shared/help/help.component';
 
 @NgModule({
   declarations: [
@@ -63,7 +64,8 @@ import { InterviewAppointedComponent } from './shared/interview-appointed/interv
     DriverCarTagComponent,
     DriverCarInterviewComponent,
     ValidatorComponent,
-    InterviewAppointedComponent
+    InterviewAppointedComponent,
+    HelpComponent
   ],
   imports: [
     BrowserModule,
