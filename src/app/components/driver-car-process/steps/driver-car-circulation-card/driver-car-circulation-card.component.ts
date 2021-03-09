@@ -14,6 +14,16 @@ export class DriverCarCirculationCardComponent implements OnInit {
 
   circulationCard: string = '';
 
+  continueButton: boolean = false;
+  
+  form = {
+    nombrePropietario: '',
+    marca: '',
+    linea: '',
+    placas: '',
+    numeroTarjeta: ''
+  };
+
   constructor(
     public headerService: HeaderService, 
     public driverCarService: DriverCarService, 
@@ -32,6 +42,17 @@ export class DriverCarCirculationCardComponent implements OnInit {
   openCamera() {
     this.cameraService.typePicture = 'circulationCard';
     this.router.navigate(['/camera']);
+  }
+
+  validateForm() {
+    console.log( Object.values(this.form));
+    Object.values(this.form).forEach(element => {
+      if(element === '') {
+        this.continueButton = false;
+      } else {
+        this.continueButton = true;
+      }
+    });
   }
 
   processComplete() {

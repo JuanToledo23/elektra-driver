@@ -9,6 +9,10 @@ import { HeaderService } from 'src/app/shared/services/header.service';
 })
 export class DriverCarInterviewComponent implements OnInit {
 
+  fecha: string = '';
+  hora:string = '';
+  activarButtonContinuar: boolean = false;
+
   constructor(
     public headerService: HeaderService, 
     public driverCarService: DriverCarService,  
@@ -24,6 +28,14 @@ export class DriverCarInterviewComponent implements OnInit {
   processComplete() {
     this.driverCarService.updateDriverCarProceedings(8);
     this.router.navigate(['/validator']);
+  }
+
+  validateForm() {
+    if(this.fecha === '' || this.hora === ''){
+      this.activarButtonContinuar=false;
+  }else {
+      this.activarButtonContinuar=true;
+  }
   }
 
 }

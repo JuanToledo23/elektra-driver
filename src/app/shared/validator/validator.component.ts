@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { HeaderService } from '../services/header.service';
+import { AnimationItem } from 'lottie-web';
+import { AnimationOptions } from 'ngx-lottie';
 
 @Component({
   selector: 'app-validator',
@@ -23,6 +25,13 @@ export class ValidatorComponent implements OnInit {
     //     this.router.navigate(['/driver-car-interview-appointed']);
     //   }, 500);
     // }, 3000);
+  }
+
+  public optionsCarga: AnimationOptions = {
+    path: 'assets/animations/Carga.json',
+  };
+
+  animationCreated(animationItem: AnimationItem): void {
   }
 
 }

@@ -6,7 +6,7 @@
     height: 66px !important;
     position: fixed;
     top: 0;
-    z-index: 1;
+    z-index: 99;
 }
 
 .main-container {
@@ -239,7 +239,7 @@
 .chat-info {
     color: #D1D1D2;
     font-size: 30px;
-    margin-top: 125px;
+    margin-top: 6.5em;
     text-align: center;
 }
 

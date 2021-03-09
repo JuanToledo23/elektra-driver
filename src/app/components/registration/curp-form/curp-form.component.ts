@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HeaderService } from 'src/app/shared/services/header.service';
+import { AnimationItem } from 'lottie-web';
+import { AnimationOptions } from 'ngx-lottie';
 
 @Component({
   selector: 'app-curp-form',
@@ -8,7 +10,7 @@ import { HeaderService } from 'src/app/shared/services/header.service';
 export class CurpFormComponent implements OnInit {
 
   validating: boolean = true;
-  completedForm: boolean = false;
+  completedForm: boolean = true;
   correctForm: boolean = false;
   curp: string = 'VELJ910216HMCNPN00';
   aceptedTerms: boolean = false;
@@ -25,7 +27,7 @@ export class CurpFormComponent implements OnInit {
 
 
   validateInput() {
-    if(this.curp.length < 18) {
+/*     if(this.curp.length < 18) {
       this.completedForm = false;
       this.validating = true;
       this.correctForm = false;
@@ -37,7 +39,7 @@ export class CurpFormComponent implements OnInit {
         this.validating = false;
         this.correctForm = true;
       }, 2000);
-    }
+    } */
   }
 
   validateTerms() {
@@ -46,6 +48,15 @@ export class CurpFormComponent implements OnInit {
     } else {
       this.continueButton = false;
     }
+  }
+
+  
+  public optionsCarga: AnimationOptions = {
+    path: 'assets/animations/Carga.json',
+  };
+
+
+  animationCreated(animationItem: AnimationItem): void {
   }
 
 }

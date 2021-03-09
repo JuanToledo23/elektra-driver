@@ -5,7 +5,7 @@
         <div class="spinner-validator">
             <input type="text" class="u-txt-demibold" maxlength="18" [(ngModel)]="curp" (keyup)="validateInput()">
             <ng-container *ngIf="completedForm">
-                <mat-icon svgIcon="ico-spinner" class="u-icon-sm spiner-icon spin-active" *ngIf="validating"></mat-icon>
+                <div lottie [options]="optionsCarga" class="spiner-icon-json" (animationCreated)="animationCreated($event)" *ngIf="validating"></div>
                 <mat-icon svgIcon="ico-check" class="u-icon-sm spiner-icon" *ngIf="!validating"></mat-icon>
             </ng-container>
         </div>

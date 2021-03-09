@@ -3,5 +3,5 @@
     <mat-icon svgIcon="ico-check" *ngIf="!validating"></mat-icon>
 </div> -->
 <div class="validator-container">
-    <mat-icon svgIcon="ico-spinner" class="spin-active"></mat-icon>
+    <div lottie [options]="optionsCarga" (animationCreated)="animationCreated($event)"></div>
 </div>

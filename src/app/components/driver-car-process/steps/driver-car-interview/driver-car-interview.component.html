@@ -11,7 +11,7 @@
         <div class="row">
             <div class="col-6 u-grid-pr">
                 <label class="u-txt-medium">Fecha</label>
-                <mat-select class="u-txt-demibold">
+                <mat-select class="u-txt-demibold" [(ngModel)]="fecha" (selectionChange)="validateForm()">
                     <mat-option value="opt1">Opción 1</mat-option>
                     <mat-option value="opt2">Opción 2</mat-option>
                     <mat-option value="opt3">Opción 3</mat-option>
@@ -19,7 +19,7 @@
             </div>
             <div class="col-6 u-grid-pl">
                 <label class="u-txt-medium">Hora</label>
-                <mat-select class="u-txt-demibold">
+                <mat-select class="u-txt-demibold" [(ngModel)]="hora" (selectionChange)="validateForm()">
                     <mat-option value="opt1">Opción 1</mat-option>
                     <mat-option value="opt2">Opción 2</mat-option>
                     <mat-option value="opt3">Opción 3</mat-option>
@@ -35,6 +35,6 @@
     </div>
     
     <div class="u-flex-center u-mt-3">
-        <button mat-flat-button color="primary" class="btn" (click)="processComplete()">Continuar</button>
+        <button mat-flat-button color="primary" class="btn" [ngClass]="{'desac-button': !activarButtonContinuar}" (click)="processComplete()">Continuar</button>
     </div>
 </div>
