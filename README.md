@@ -1,4 +1,8 @@
-# EktDriver
+# Elektra Driver
+
+## Maquetado animado e interactivo de app "Elektra Driver"
+
+Utilizar version de [NodeJS 15.14.0](https://nodejs.org/dist/v15.14.0/)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.15.
 
